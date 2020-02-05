@@ -25,9 +25,6 @@ def train(args):
     processor = DataPrecessForSingleSentence(bert_tokenizer=bert_tokenizer)
 
     # data preprocess
-    # seqs position
-    # seq_masks token
-    # seq_segments segment
     seqs, seq_masks, seq_segments, labels = processor.get_input(
         dataset=data, max_seq_len=int(52))
 
